@@ -2,33 +2,33 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import "../styles/teacherList.css"
-import {Image1} from "../assets/images/cuphead-mumgn-bothers.png";
-import {Image2} from "../assets/images/sam-max.jpeg";
-import {Image3} from "../assets/images/sonic_and_knuckles.jpeg";
-import {Image4} from "../assets/images/teacherspet.jpeg";
+import Image1 from "../assets/images/cuphead-mumgn-bothers.png";
+import Image2 from "../assets/images/sam-max.jpeg";
+import Image3 from "../assets/images/asterix_obelix.webp";
+import Image4 from "../assets/images/teacherspet.jpeg";
 
 const teachers = [
     {
-        image: <Image1/>,
-        name: 'Prof. Cupheads',
+        image: Image1,
+        name: 'Prof ID: CHS',
         duration: '20 hours lesson',
         cost: '100'
     },
     {
-        image: <Image2/>,
-        name: 'Prof. Sam and Max',
+        image: Image2,
+        name: 'Prof ID: AAO',
         duration: '20 hours lesson',
         cost: '100'
     },
     {
-        image: <Image3/>,
-        name: 'Prof. Sonic and HedgeHog',
+        image: Image3,
+        name: 'Prof ID: SAK',
         duration: '20 hours lesson',
         cost: '100'
     },
     {
-        image: <Image4/>,
-        name: 'Prof. Teachers Pet',
+        image: Image4,
+        name: 'Prof ID: TSP',
         duration: '20 hours lesson',
         cost: '100'
     },
@@ -52,8 +52,8 @@ const TeacherList = () => {
                         <img src={teacher.image} alt={teacher.name} />
                         <h2>{teacher.name}</h2>
                     </div>
-                    <span>{teacher.duration}</span>
-                    <span>{teacher.cost}</span>
+                    <span>Total: {teacher.duration}</span>
+                    <span>Cost: {teacher.cost}</span>
                     <span className="teacher--todo">:</span>
                 </div>
             ))}

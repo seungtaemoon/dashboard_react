@@ -40,6 +40,7 @@ const Profile = () => {
                 <h3 className="username">Cupheads</h3>
                 <span className="profession">Teacher</span>
             </div>
+            <h3>Responsible Courses: </h3>
             <div className="user-courses">
                 {courses.map(course => (
                     <div className="course">
