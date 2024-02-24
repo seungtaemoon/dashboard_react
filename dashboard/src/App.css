@@ -182,7 +182,7 @@ body {
 
 /* Medium <= 992px */
   
-@media screen and (max-width: 992px) {
+@media screen {
   .grid-container {
     grid-template-columns: 1fr;
     grid-template-rows: 0.2fr 3fr;
@@ -203,25 +203,20 @@ body {
     display: inline;
   }
 }
-/* Small <= 768px */
-  
-@media screen and (max-width: 768px) {
-  .main-cards {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    margin-bottom: 0;
-  }
 
-  .charts {
-    grid-template-columns: 1fr;
-    margin-top: 30px;
-  }
+
+/* Dashboard */
+.dashboard{
+  display: flex;
+  gap: 20px;
 }
 
-/* Extra Small <= 576px */
-
-@media screen and (max-width: 576px) {
-  .hedaer-left {
-    display: none;
-  }
+.dashboard--content{
+  background: #fff;
+  flex: 1;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
 }
