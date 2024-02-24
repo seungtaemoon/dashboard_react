@@ -1,18 +1,21 @@
-/* eslint-disable no-unused-vars */
-import React from "react";
-import Sidebar from "./components/Sidebar";
-import Content from "./components/Content";
-import Profile from "./components/Profile";
-import "./App.css";
+import { useState } from 'react'
+import './App.css'
+import Header from './components/Header'
+import Sidebar from './components/Sidebar'
+import Content from './components/Content'
 
-const App = () => {
-  return(
-    <div className="dashboard">
-      <Sidebar/>
-      <div className="dashboard--content">
-        <Content/>
-        <Profile/>
-      </div>
+function App() {
+  const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
+
+  const OpenSidebar = () => {
+    setOpenSidebarToggle(!openSidebarToggle)
+  }
+
+  return (
+    <div className='grid-container'>
+      <Header OpenSidebar={OpenSidebar}/>
+      <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
+      <Content />
     </div>
   )
 }

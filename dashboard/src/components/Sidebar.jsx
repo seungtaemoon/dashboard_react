@@ -1,49 +1,61 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
-import {
-    BiHome, 
-    BiBookAlt, 
-    BiMessage, 
-    BiSolidReport, 
-    BiStats, 
-    BiTask,
-    BiHelpCircle
-} from "react-icons/bi";
-import "../styles/sidebar.css";
+/* eslint-disable react/prop-types */
+import React from 'react'
+import 
+{BsCart3, BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, 
+  BsListCheck, BsMenuButtonWideFill, BsFillGearFill}
+ from 'react-icons/bs'
+ import "../App.css"
 
-const Sidebar = () => {
-    return <div className="menu">
-        <div className="logo">
-            <BiBookAlt className="logo-icon"/>
-            <h2>EduFlex</h2>
+function Sidebar({openSidebarToggle, OpenSidebar}) {
+  return (
+    <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive": ""}>
+        <div className='sidebar-title'>
+            <div className='sidebar-brand'>
+                <BsCart3  className='icon_header'/> SHOP
+            </div>
+            <span className='icon close_icon' onClick={OpenSidebar}>X</span>
         </div>
-        <div className="menu--list">
-            <a href="#" className="item">
-                <BiHome className="icon"/>
-                Dashboard
-            </a>
-            <a href="#" className="item">
-                <BiTask className="icon"/>
-                Assignment
-            </a>
-            <a href="#" className="item">
-                <BiSolidReport className="icon"/>
-                Report
-            </a>
-            <a href="#" className="item">
-                <BiStats className="icon"/>
-                Stats
-            </a>
-            <a href="#" className="item">
-                <BiMessage className="icon"/>
-                Message
-            </a>
-            <a href="#" className="item">
-                <BiHelpCircle className="icon"/>
-                Help
-            </a>
-        </div>
-    </div>
+
+        <ul className='sidebar-list'>
+            <li className='sidebar-list-item'>
+                <a href="">
+                    <BsGrid1X2Fill className='icon'/> Dashboard
+                </a>
+            </li>
+            <li className='sidebar-list-item'>
+                <a href="">
+                    <BsFillArchiveFill className='icon'/> Products
+                </a>
+            </li>
+            <li className='sidebar-list-item'>
+                <a href="">
+                    <BsFillGrid3X3GapFill className='icon'/> Categories
+                </a>
+            </li>
+            <li className='sidebar-list-item'>
+                <a href="">
+                    <BsPeopleFill className='icon'/> Customers
+                </a>
+            </li>
+            <li className='sidebar-list-item'>
+                <a href="">
+                    <BsListCheck className='icon'/> Inventory
+                </a>
+            </li>
+            <li className='sidebar-list-item'>
+                <a href="">
+                    <BsMenuButtonWideFill className='icon'/> Reports
+                </a>
+            </li>
+            <li className='sidebar-list-item'>
+                <a href="">
+                    <BsFillGearFill className='icon'/> Setting
+                </a>
+            </li>
+        </ul>
+    </aside>
+  )
 }
 
 export default Sidebar
