@@ -2,20 +2,20 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React from 'react'
-import {BiLogoHtml5, BiLogoAndroid, BiBuilding} from 'react-icons/bi'
+import {BiBookOpen, BiHistory, BiArchive} from 'react-icons/bi'
 
 const course = [
     {
-        title: 'Web Development',
-        icon: <BiLogoHtml5/>,
+        title: 'Language anad Literature',
+        icon: <BiBookOpen/>,
     },
     {
-        title: 'App Development',
-        icon: <BiLogoAndroid/>,
+        title: 'History and Society',
+        icon: <BiHistory/>,
     },
     {
-        title: 'UX & UI',
-        icon: <BiBuilding/>,
+        title: 'Philosophy and Humanities',
+        icon: <BiArchive/>,
     },
 ]
 
