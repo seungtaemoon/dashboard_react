@@ -1,9 +1,10 @@
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/jsx-key */
 /* eslint-disable no-unused-vars */
 import React from "react";
 import ProfileHeader from "./ProfileHeader";
 import "../styles/profile.css"
-import userImage1 from '../assets/images/cuphead-mumgn-bothers.png'
+import Image1 from '../assets/images/cuphead-mumgn-bothers.png'
 import {
     BiBook
 } from "react-icons/bi"
@@ -36,7 +37,7 @@ const Profile = () => {
         <ProfileHeader/>
         <div className="user--profile">
             <div className="user--detail">
-                <img src={userImage1} alt="" />
+            <img src={Image1}/>               
                 <h3 className="username">Cupheads</h3>
                 <span className="profession">Teacher</span>
             </div>
