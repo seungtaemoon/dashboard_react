@@ -7,7 +7,8 @@ import Sidebar from './components/Sidebar'
 import Content from './components/Content'
 import Profile from './components/Profile'
 // Redux
-import {connect} from "react-redux"
+import {connect, Provider} from "react-redux"
+import store from './store';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
   }
 
   return (
+    <Provider store={store}>
     <div className='grid-container'>
       <Header OpenSidebar={OpenSidebar}/>
       <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
@@ -28,6 +30,7 @@ function App() {
         </div>
       </div>
     </div>
+    </Provider>
   )
 }
 
