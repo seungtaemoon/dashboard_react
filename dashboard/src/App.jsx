@@ -9,6 +9,7 @@ import Profile from './components/Profile'
 // Redux
 import {connect, Provider} from "react-redux"
 import store from './store';
+// import Cart from "./components/Cart";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         </div>
       </div>
     </div>
+    {/* <Cart/> */}
     </Provider>
   )
 }
